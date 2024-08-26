@@ -8,7 +8,7 @@ check50:
       hello world:
         - run: python3 helloworld.py
           stdout: Hello world!
-      hello name 2:
+      hello name:
         - run: python3 helloname.py 
           stdin: 
             - Kyle
