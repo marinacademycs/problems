@@ -4,8 +4,3 @@ import check50
 def hw_exists():
     """helloworld.py exists."""
     check50.exists("helloworld.py")
-
-@check50.check()
-def hn_exists():
-    """helloname.py exists."""
-    check50.exists("helloname.py")
