@@ -5,10 +5,10 @@ check50:
     - !include "helloname.py"
 
   checks:
-      hello world:
+      Hello World:
         - run: python3 helloworld.py
           stdout: Hello world!
-      hello name:
+      Hello Kyle:
         - run: python3 helloname.py 
           stdin: 
             - Kyle
