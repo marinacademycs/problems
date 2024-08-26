@@ -4,15 +4,15 @@ check50:
     - !include "helloworld.py"
     - !include "helloname.py"
 
-checks:
-    hello world:
-      - run: python3 helloworld.py
-        stdout: Hello world!
-    hello name 2:
-      - run: python3 helloname.py 
-        stdin: 
-          - Kyle
-        stdout: Hello, Kyle
+  checks:
+      hello world:
+        - run: python3 helloworld.py
+          stdout: Hello world!
+      hello name 2:
+        - run: python3 helloname.py 
+          stdin: 
+            - Kyle
+          stdout: Hello, Kyle
 
 submit50:
   files: *check50_files
