@@ -2,17 +2,11 @@ check50:
   files: &check50_files
     - !exclude "*"
     - !include "helloworld.py"
-    - !include "helloname.py"
-
+    
   checks:
       Hello World:
         - run: python3 helloworld.py
           stdout: Hello world!
-      Hello Kyle:
-        - run: python3 helloname.py 
-          stdin: 
-            - Kyle
-          stdout: Hello, Kyle
 
 submit50:
   files: *check50_files
