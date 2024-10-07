@@ -1,0 +1,9 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !include "camel.py"
+    - !require camel.py
+  style: true
+  
+check50:
+  files: *submit50_files
