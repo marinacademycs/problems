@@ -50,7 +50,7 @@ def test_3_divided_by_2():
 
 @check50.check(exists)
 def test_round_to_tenths():
-    """input of \"2 / 3\" yields output of .7. Did you round to tenths?"""
+    """input of \"2 / 3\" yields output of 0.7 -- Did you round to one decimal?"""
     input = "2 / 3"
     output = "0.7"
     check50.run("python3 interpreter.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
