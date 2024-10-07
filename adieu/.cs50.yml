@@ -1,9 +1,9 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !include "interpreter.py"
-    - !require interpreter.py
-  style: true
+    - !include "*.py"
+    - !require adieu.py
+  style: false
   
 check50:
   files: *submit50_files

@@ -1,8 +1,8 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !include "interpreter.py"
-    - !require interpreter.py
+    - !include "extensions.py"
+    - !require extensions.py
   style: true
   
 check50:

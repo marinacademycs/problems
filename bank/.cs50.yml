@@ -1,8 +1,8 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !include "interpreter.py"
-    - !require interpreter.py
+    - !include "bank.py"
+    - !require bank.py
   style: true
   
 check50:
