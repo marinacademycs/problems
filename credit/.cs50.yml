@@ -1,8 +1,8 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !include "cash.py"
-    - !require cash.py
+    - !include "credit.py"
+    - !require credit.py
 
 check50:
   files: *submit50_files
