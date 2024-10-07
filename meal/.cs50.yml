@@ -1,8 +1,8 @@
 submit50:
   files: &submit50_files
     - !exclude "*"
-    - !include "twttr.py"
-    - !require twttr.py
+    - !include "meal.py"
+    - !require meal.py
   style: true
   
 check50:
