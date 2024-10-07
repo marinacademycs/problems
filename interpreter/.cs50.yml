@@ -1,0 +1,9 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !include interpreter.py
+    - !require interpreter.py
+  style: true
+  
+check50:
+  files: *submit50_files
