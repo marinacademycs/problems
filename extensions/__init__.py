@@ -111,7 +111,15 @@ def test_noextension():
     output = "application/octet-stream"
     check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
     
-    
+
+@check50.check(exists)
+def test_twoextensions():
+    """input of myfile, with two extensions, yields output of application/zip"""
+    input = "myfile.jpg.zip"
+    output = "application/zip"
+    check50.run("python3 extensions.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
+
+
 def regex(text):
     """match case-sensitively, allowing for spaces on either side"""
     return fr'^\s*{escape(text)}\s*$'
