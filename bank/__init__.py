@@ -60,7 +60,7 @@ def testWhats_up():
 def testNewman_Hello():
     """input of \"Newman, hello?\" yields output of $0"""
     input = "Newman, hello?"
-    output = "$0"
+    output = "$100"
     check50.run("python3 bank.py").stdin(input, prompt=True).stdout(regex(output), output, regex=True).exit()
 
 
