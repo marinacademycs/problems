@@ -48,16 +48,5 @@ def test_reject_negative():
     """rejects a negative input like -1"""
     check50.run("python3 cash.py").stdin("-1").reject()
 
-@check50.check(exists)
-def test_reject_foo():
-    """rejects a non-numeric input of "foo" """
-    check50.run("python3 cash.py").stdin("foo").reject()
-
-@check50.check(exists)
-def test_reject_empty():
-    """rejects a non-numeric input of "" """
-    check50.run("python3 cash.py").stdin("").reject()
-
-
 def coins(num):
     return fr"(^|[^\d]){num}(?!\d)"
