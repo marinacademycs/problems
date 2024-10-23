@@ -7,17 +7,17 @@ def exists():
 
 @check50.check(exists)
 def testHelloWorld():
-    """Input of all lowercase and less than 15 characters long"""
+    """input of all lowercase and less than 15 characters long"""
     output = check50.run("python3 password_checker.py").stdin("helloworld", prompt=False).stdout("Weak").exit()
 
 @check50.check(exists)
 def testHackorz():
-    """input of 8 chars and meets all other requirements"""
+    """input of 8 chars and meets all the other requirements"""
     output = check50.run("python3 password_checker.py").stdin("h4cK0rz!", prompt=False).stdout("Strong").exit()
 
 @check50.check(exists)
 def testLessThanEight():
-    """Input of less than 8 characters"""
+    """input of less than 8 characters"""
     output = check50.run("python3 password_checker.py").stdin("He11!o", prompt=False).stdout("Weak").exit()
 
 
