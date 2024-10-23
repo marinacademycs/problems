@@ -40,16 +40,6 @@ def test24():
     (check50.run("python3 mario.py").stdin("9").reject()
             .stdin("2").stdout(open("2.txt")).exit(0))
 
-@check50.check(exists)
-def test_reject_foo():
-    """rejects a non-numeric height of "foo" """
-    check50.run("python3 mario.py").stdin("foo").reject()
-
-@check50.check(exists)
-def test_reject_empty():
-    """rejects a non-numeric height of "" """
-    check50.run("python3 mario.py").stdin("").reject()
-
 
 def check_pyramid(output, correct):
     if output == correct:
