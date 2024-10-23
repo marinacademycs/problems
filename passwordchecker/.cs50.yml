@@ -1,0 +1,8 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !include "password_checker.py"
+    - !require password_checker.py
+
+check50:
+  files: *submit50_files
