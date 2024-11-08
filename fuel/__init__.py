@@ -106,6 +106,13 @@ def test_no_slash():
     check50.run("python3 fuel.py").stdin(input, prompt=True).reject()
 
 
+@check50.check(exists)
+def test_negative_numerator():
+    """input of -1/3 results in reprompt"""
+    input = "-1/3"
+    check50.run("python3 fuel.py").stdin(input, prompt=True).reject()
+
+
 def regex(percent):
     """match case-insensitively with only whitespace on either side"""
     return fr'(?i)^\s*{escape(percent)}\s*$'
