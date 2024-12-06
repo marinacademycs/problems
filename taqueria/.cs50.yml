@@ -1,0 +1,9 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !include "taqueria.py"
+    - !require taqueria.py
+  style: true
+  
+check50:
+  files: *submit50_files
