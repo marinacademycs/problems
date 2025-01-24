@@ -1,0 +1,9 @@
+submit50:
+  files: &submit50_files
+    - !exclude "*"
+    - !include "library.py"
+    - !require library.py
+  style: true
+  
+check50:
+  files: *submit50_files
