@@ -1,6 +1,5 @@
 submit50:
   files: &submit50_files
-    - !exclude "*"
     - !include "inauguration.py"
     - !require inauguration.py
   style: true
